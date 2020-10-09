@@ -31,7 +31,6 @@ export default function ensureAuthenticated(
 
     request.user = {
       id: sub,
-      // 17:06
     };
 
     return next();
