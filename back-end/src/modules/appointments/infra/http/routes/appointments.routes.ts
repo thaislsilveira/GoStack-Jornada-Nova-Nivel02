@@ -18,7 +18,6 @@ appointmentsRouter.post(
       provider_id: Joi.string().uuid().required(),
       date: Joi.date(),
     },
-    // parei em 04:55
   }),
   appointmentsController.create,
 );
