@@ -48,10 +48,12 @@ class ListProviderMonthAvailabilityService {
         return getDate(appoinment.date) === day;
       });
 
+      const currentMonth = new Date().getMonth();
+
       return {
         day,
         available:
-          isAfter(compareDate, new Date()) && appoinmentsInDay.length < 10,
+          isAfter(compareDate, currentMonth) && appoinmentsInDay.length < 10,
       };
     });
 
